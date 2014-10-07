@@ -11,7 +11,7 @@ CGame::CGame()
 	GetISystem()->SetIGame(this);
 }
 
-CGame::CGame()
+CGame::~CGame()
 {
 	_pFramework->EndGameContext();
 	g_pGame = 0;
@@ -57,7 +57,33 @@ void					CGame::OnRenderScene(const SRenderingPassInfo &passInfo) {}
 
 void					CGame::RenderGameWarnings() {}
 
-void					RemoveGameWarning(const char* stringId) {}
+void					CGame::RemoveGameWarning(const char* stringId) {}
+
+bool					CGame::GameEndLevel(const char* stringId) { return (false); }
+
+IGameStateRecorder		*CGame::CreateGameStateRecorder(IGameplayListener* pL) { return (nullptr); }
+
+void					CGame::FullSerialize(TSerialize ser) {}
+
+void					CGame::PostSerialize() {}
+
+IGame::ExportFilesInfo	CGame::ExportLevelData(const char* levelName, const char* missionName) const { return (IGame::ExportFilesInfo("NoName", 0)); }
+
+void					CGame::LoadExportedLevelData(const char* levelName, const char* missionName) {}
+
+void					CGame::RegisterGameFlowNodes() {}
+
+void					CGame::GetMemoryStatistics(ICrySizer * s) { s->Add(*this); }
+
+const char				*CGame::GetLongName() { return (GAME_LONGNAME); }
+
+const char				*CGame::GetName() { return (GAME_NAME); }
+
+IGameFramework			*CGame::GetIGameFramework() { return (_pFramework); }
+
+const char				*CGame::GetMappedLevelName(const char *levelName) const { return (""); }
+
+IAntiCheatManager		*CGame::GetAntiCheatManager() { return (nullptr); }
 
 const uint8				*CGame::GetDRMKey(uint32 *pKeySize)
 {
@@ -66,6 +92,10 @@ const uint8				*CGame::GetDRMKey(uint32 *pKeySize)
 }
 
 const char				*CGame::GetDRMFileList() { return (NULL); }
+
+IGamePhysicsSettings	*CGame::GetIGamePhysicsSettings() { return (nullptr); }
+
+void					CGame::SetUserProfileChanged(bool yesNo) {}
 
 ///*************************************************************************
 //Crytek Source File.

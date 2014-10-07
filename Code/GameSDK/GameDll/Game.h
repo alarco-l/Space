@@ -5,8 +5,8 @@
 #include <IGameObjectSystem.h>
 #include <IGameObject.h>
 
-#define GAME_NAME           "GAMESDK"
-#define GAME_LONGNAME		"CRYENGINE GAME SDK"
+#define GAME_NAME           "BlackHole"
+#define GAME_LONGNAME		"BlackHole CryEngine"
 
 class								CGame : public IGame
 {
@@ -51,6 +51,9 @@ public:
 protected:
 	IGameFramework			        *_pFramework;
 };
+
+
+SC_API extern CGame *g_pGame;
 
 ///*************************************************************************
 //  Crytek Source File.
