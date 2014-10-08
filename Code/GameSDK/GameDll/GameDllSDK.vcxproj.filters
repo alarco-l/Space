@@ -2,13 +2,6 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="StdAfx.cpp" />
-    <ClCompile Include="ProceduralClipAiming.cpp" />
-    <ClCompile Include="AnimActionAIAiming.cpp">
-      <Filter>Actor Files\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="ProceduralContextAim.cpp">
-      <Filter>Actor Files\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="ProceduralClipAiming.cpp">
       <Filter>Actor Files\Animation</Filter>
     </ClCompile>
@@ -20,11 +13,10 @@
     </ClCompile>
     <ClCompile Include="StdAfx.h" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameStartup.cpp" />
+    <ClCompile Include="EditorGame.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Voting.cpp" />
-    <ClInclude Include="AnimActionAIAiming.h" />
-    <ClInclude Include="ProceduralContextAim.h" />
     <ClInclude Include="AnimActionAIAiming.h">
       <Filter>Actor Files\Animation</Filter>
     </ClInclude>
@@ -32,7 +24,6 @@
       <Filter>Actor Files\Animation</Filter>
     </ClInclude>
     <ClInclude Include="resource.h" />
-    <ClInclude Include="GameStateRecorder.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource.h">
       <Filter>res</Filter>
@@ -40,9 +31,8 @@
     <ClInclude Include="GameStateRecorder.h">
       <Filter>Game Files</Filter>
     </ClInclude>
-    <ClInclude Include="Network\Lobby\PlaylistActivityTracker.h">
-      <Filter>Multiplayer\Network\Lobby</Filter>
-    </ClInclude>
+    <ClInclude Include="GameStartup.h" />
+    <ClInclude Include="EditorGame.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />

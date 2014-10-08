@@ -1,4 +1,9 @@
-#pragma once
+#ifndef _GAME_H_
+#define _GAME_H_
+
+#if _MSC_VER > 1000
+# pragma once
+#endif
 
 #include <IGame.h>
 #include <IGameFramework.h>
@@ -54,6 +59,8 @@ protected:
 
 
 SC_API extern CGame *g_pGame;
+
+#endif // _GAME_H_
 
 ///*************************************************************************
 //  Crytek Source File.

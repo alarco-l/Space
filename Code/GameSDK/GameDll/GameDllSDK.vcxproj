@@ -578,7 +578,9 @@
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="EditorGame.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameStartup.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
@@ -597,7 +599,9 @@
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="EditorGame.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameStartup.h" />
     <ClInclude Include="resource.h" />
     <ClCompile Include="StdAfx.h">
       <ExcludedFromBuild Condition="'$(Platform)'!='ORBIS'">true</ExcludedFromBuild>
