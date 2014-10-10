@@ -580,6 +580,7 @@
   <ItemGroup>
     <ClCompile Include="EditorGame.cpp" />
     <ClCompile Include="Game.cpp" />
+    <ClCompile Include="GameRules.cpp" />
     <ClCompile Include="GameStartup.cpp" />
     <ClCompile Include="StdAfx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
@@ -601,6 +602,7 @@
   <ItemGroup>
     <ClInclude Include="EditorGame.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="GameRules.h" />
     <ClInclude Include="GameStartup.h" />
     <ClInclude Include="resource.h" />
     <ClCompile Include="StdAfx.h">
