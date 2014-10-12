@@ -30,6 +30,66 @@ void							CGameRules::PostReloadExtension(IGameObject *pGameObject, const SEnti
 
 void							CGameRules::Release() {}
 
+void							CGameRules::FullSerialize(TSerialize ser) {}
+
+bool							CGameRules::NetSerialize(TSerialize ser, EEntityAspects aspect, uint8 profile, int pflags) { return (true); }
+
+void							CGameRules::PostSerialize() {}
+
+void							CGameRules::SerializeSpawnInfo(TSerialize ser) {}
+
+void							CGameRules::Update(SEntityUpdateContext& ctx, int updateSlot) {}
+
+void							CGameRules::HandleEvent(const SGameObjectEvent& event) {}
+
+void							CGameRules::ProcessEvent(SEntityEvent& event) {}
+
+void							CGameRules::PostUpdate(float frameTime) {}
+
+void							CGameRules::PostRemoteSpawn() {}
+
+void							CGameRules::GetMemoryUsage(ICrySizer *pSizer) const {}
+
+bool							CGameRules::GetEntityPoolSignature(TSerialize signature) { return (true); }
+
+NetworkAspectType				CGameRules::GetNetSerializeAspects() { return eEA_All; }
+
+const void						*CGameRules::GetRMIBase() const { return CGameObjectExtensionHelper::GetRMIBase(); }
+
+void							CGameRules::SetChannelId(uint16 id) {}
+
+void							CGameRules::SetAuthority(bool auth) {}
+
+bool							CGameRules::ShouldKeepClient(int channelId, EDisconnectionCause cause, const char *desc) const { return (true); }
+
+void							CGameRules::PrecacheLevel() {}
+
+void							CGameRules::PrecacheLevelResource(const char* resourceName, EGameResourceType resourceType) {}
+
+XmlNodeRef						CGameRules::FindPrecachedXmlFile(const char *sFilename) { return (0); }
+
+void							CGameRules::OnConnect(struct INetChannel *pNetChannel) {}
+
+void							CGameRules::OnDisconnect(EDisconnectionCause cause, const char *desc) {}
+
+bool							CGameRules::OnClientConnect(int channelId, bool isReset)
+{
+	IActor *pActor = 0;
+
+	// faire spawn player ici je pense
+
+	return (pActor != 0);
+}
+
+void							CGameRules::OnClientDisconnect(int channelId, EDisconnectionCause cause, const char *desc, bool keepClient) {}
+
+bool							CGameRules::OnClientEnteredGame(int channelId, bool isReset) { return (true); }
+
+void							CGameRules::OnEntitySpawn(IEntity *pEntity) {}
+
+void							CGameRules::OnEntityRemoved(IEntity *pEntity) {}
+
+void							CGameRules::OnEntityReused(IEntity *pEntity, SEntitySpawnParams &params, EntityId prevId) {}
 
 ///*************************************************************************
 //	Crytek Source File.

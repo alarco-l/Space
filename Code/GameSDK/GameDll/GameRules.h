@@ -36,7 +36,7 @@ public:
 
 	virtual void							GetMemoryUsage(ICrySizer *pSizer) const;
 	virtual bool							GetEntityPoolSignature(TSerialize signature);
-	virtual NetworkAspectType				GetNetSerializeAspects() { return eEA_All; }
+	virtual NetworkAspectType				GetNetSerializeAspects();
 	virtual const void						*GetRMIBase() const;
 
 	virtual void							SetChannelId(uint16 id);
