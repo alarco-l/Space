@@ -1,7 +1,7 @@
 #include "StdAfx.h"
 
 #include "GameRules.h"
-#include "Actor.h"
+//#include "Actor.h"
 
 CGameRules::CGameRules() {}
 
@@ -76,7 +76,7 @@ bool							CGameRules::OnClientConnect(int channelId, bool isReset)
 {
 	IActor *pActor = 0;
 
-	// faire spawn player ici je pense
+	// create actor ici je pense
 
 	return (pActor != 0);
 }
@@ -90,6 +90,68 @@ void							CGameRules::OnEntitySpawn(IEntity *pEntity) {}
 void							CGameRules::OnEntityRemoved(IEntity *pEntity) {}
 
 void							CGameRules::OnEntityReused(IEntity *pEntity, SEntitySpawnParams &params, EntityId prevId) {}
+
+void							CGameRules::SendTextMessage(ETextMessageType type, const char *msg, uint32 to, int channelId,
+								const char *p0, const char *p1, const char *p2, const char *p3) {}
+
+void							CGameRules::SendChatMessage(EChatMessageType type, EntityId sourceId, EntityId targetId, const char *msg) {}
+
+void							CGameRules::ClientHit(const HitInfo &hitInfo) {}
+
+void							CGameRules::ServerHit(const HitInfo &hitInfo) {}
+
+void							CGameRules::OnVehicleDestroyed(EntityId id) {}
+
+void							CGameRules::OnVehicleSubmerged(EntityId id, float ratio) {}
+
+bool							CGameRules::CanEnterVehicle(EntityId playerId) { return (true); }
+
+void							CGameRules::CreateEntityRespawnData(EntityId entityId) {}
+
+bool							CGameRules::HasEntityRespawnData(EntityId entityId) const { return (true); }
+
+void							CGameRules::ScheduleEntityRespawn(EntityId entityId, bool unique, float timer) {}
+
+void							CGameRules::AbortEntityRespawn(EntityId entityId, bool destroyData) {}
+
+void							CGameRules::ScheduleEntityRemoval(EntityId entityId, float timer, bool visibility) {}
+
+void							CGameRules::AbortEntityRemoval(EntityId entityId) {}
+
+bool							CGameRules::OnCollision(const SGameCollision& event) { return (true); }
+
+void							CGameRules::OnCollision_NotifyAI(const EventPhys * pEvent) {}
+
+void							CGameRules::ShowStatus() {}
+
+void							CGameRules::ClearAllMigratingPlayers(void) {}
+
+void							CGameRules::StoreMigratingPlayer(IActor* pActor) {}
+
+void							CGameRules::RestoreChannelTeamsFromMigration(IActor* pActor) {}
+
+int								CGameRules::GetHitTypeId(const uint32 crc) const { return (0); }
+
+int								CGameRules::GetHitTypeId(const char *type) const { return (0); }
+
+const char						*CGameRules::GetHitType(int id) const { return (NULL); }
+
+bool							CGameRules::IsFrozen(EntityId entityId) const { return (true); }
+
+bool							CGameRules::IsTimeLimited() const { return (true); }
+
+float							CGameRules::GetRemainingGameTime() const { return (0.0F); }
+
+bool							CGameRules::IsClientFriendlyProjectile(const EntityId projectileId, const EntityId targetEntityId) { return (true); }
+
+void							CGameRules::AddHitListener(IHitListener* pHitListener) {}
+
+void							CGameRules::RemoveHitListener(IHitListener* pHitListener) {}
+
+void							CGameRules::SetRemainingGameTime(float seconds) {}
+
+EntityId						CGameRules::SetChannelForMigratingPlayer(const char* name, uint16 channelID) { return (0); }
+
 
 ///*************************************************************************
 //	Crytek Source File.

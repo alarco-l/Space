@@ -2,37 +2,22 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="StdAfx.cpp" />
-    <ClCompile Include="ProceduralClipAiming.cpp">
-      <Filter>Actor Files\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="ProceduralContextAim.cpp">
-      <Filter>Actor Files\Animation</Filter>
-    </ClCompile>
-    <ClCompile Include="AnimActionAIAiming.cpp">
-      <Filter>Actor Files\Animation</Filter>
-    </ClCompile>
     <ClCompile Include="StdAfx.h" />
     <ClCompile Include="Game.cpp" />
     <ClCompile Include="GameStartup.cpp" />
     <ClCompile Include="EditorGame.cpp" />
+    <ClCompile Include="GameRules.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="AnimActionAIAiming.h">
-      <Filter>Actor Files\Animation</Filter>
-    </ClInclude>
-    <ClInclude Include="ProceduralContextAim.h">
-      <Filter>Actor Files\Animation</Filter>
-    </ClInclude>
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="resource.h">
       <Filter>res</Filter>
     </ClInclude>
-    <ClInclude Include="GameStateRecorder.h">
-      <Filter>Game Files</Filter>
-    </ClInclude>
     <ClInclude Include="GameStartup.h" />
     <ClInclude Include="EditorGame.h" />
+    <ClInclude Include="GameRules.h" />
+    <ClInclude Include="Actor.h" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Game.h" />
